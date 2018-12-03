@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cardboard ZUO</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+</head>
+<body>
+<div id="uppermenu"><span class="container">tel : 00000000 | email : contact@domain.com</span></div>
+<div class="container">
+  <!--centers the content between from header to footer-->
+  <header  class="clearfix">
+    <h1 class="left"><span>ZUO</span>blog</h1>
+    <form action="#" class="right" method="post">
+      <input class="span-6 last" type="text" name="searchField" placeholder="search">
+    </form>
+  </header>
+  <nav>
+    <ul>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div id="content" class="clearfix">
+    <section id="posts" class="span-15 append-1">
+      <h1><span>Recent posts</span></h1>
+      <article>
+        <div class="date span-3">03 December</div>
+        <h2><a href="#">VIRTUAL REALITY</a></h2>
+        <div class="metadata">
+          <ul>
+            <li>posted by <a href="#">Admin</a></li>
+            <li> in <a href="#">Unity3D</a></li>
+            <li><a href="#">59comments</a></li>
+          </ul>
+        </div>
+<p align=center style='text-align:center'><b><span style='font-size:22.0pt;line-height:115%'>VIRTUAL REALITY<o:p></o:p></span></b></p>
+		<img src="images/1.gif" alt="">
+		<![if !vml]><img width=500 height=281
+src="GoogleCardboardVR_files/image001.gif" v:shapes="Picture_x0020_1"><![endif]></span><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+		
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%;font-family:"Arial","sans-serif"'>Virtual Reality is a computerized
+simulation of natural or imaginary reality. User of VR is fully or partially
+immersed in the environment. VR is the term used to describe the scene created
+by any computer program in which the user plays an interactive role within the
+context of the computer-generated three-dimensional worlds. Virtual reality
+(VR) is a term that applies to computer-simulated environments that can
+simulate physical presence in places in the real world, as well as in imaginary
+worlds.</p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%;font-family:"Arial","sans-serif"'>Head mounted displays are used with
+headphones and hand controllers to provide a&nbsp;fully
+immersive&nbsp;experience. With the largest technology companies on planet
+earth (Facebook, Google, and Microsoft) currently investing billions of dollars
+into&nbsp;virtual reality companies and startups, the future of virtual reality
+is set to be a pillar of our everyday lives.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><span style='font-size:12.0pt;line-height:200%;font-family:
+"Arial","sans-serif"'><span style='mso-tab-count:1'>            </span>We won’t
+discuss how virtual reality work. We will just develop a basic virtual reality
+application using Google Cardboard SDK in Unity3D. If you want to read more
+detail, I recommend this website:</span> <a
+href="https://www.realitytechnologies.com/virtual-reality/"><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>https://www.realitytechnologies.com/virtual-reality/</span></a><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'> or
+you can get this book:<span style='mso-spacerun:yes'>  </span></span><a
+href="https://www.amazon.com/Learning-Virtual-Reality-Experiences-Applications-ebook/dp/B01770MBN4"><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>Learning
+Virtual Reality by Tony Parisi</span></a><span style='font-size:12.0pt;
+line-height:200%;font-family:"Arial","sans-serif"'>.And I think everyone ,who
+want to develop virtual reality app using GoogleVR, has to read the article is
+created by Google in here : </span><a
+href="https://developers.google.com/vr/develop/unity/get-started-android"><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>https://developers.google.com/vr/develop/unity/get-started-android</span></a><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'> .
+OK Lets Start<o:p></o:p></span></p>
+
+		
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><b style='mso-bidi-font-weight:normal'><span
+style='font-size:15.0pt;line-height:200%;font-family:"Arial","sans-serif"'>Set
+up Your Environment<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;text-indent:-18.0pt;line-height:200%;mso-list:l3 level1 lfo6'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>A view
+and an Android Phone. Of course first you need a hardware. It can be a phone
+that support Daydream or Cardboard. You can run the app on any Android device has
+API Level 19 or higher, if you use Cardboard. If you want to use Daydream,
+check whether your Android device support it or not in </span><a
+href="https://vr.google.com/daydream/smartphonevr/phones/"><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>here</span></a><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>.
+You can buy any cardboard view device to run the app. These devices (called
+glasses) are very cheap. You can buy these devices with payying $3-$5 or if you
+want good one that is created by Google,<span style='mso-spacerun:yes'> 
+</span>pay just $30.</span><b style='mso-bidi-font-weight:normal'><span
+style='font-size:15.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;text-indent:-18.0pt;line-height:200%;mso-list:l3 level1 lfo6'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Unity3D and Google VR SDK.  You need version 5.6 of Unity3D or higher. Recommened the
+lastest version. We will use Unity 2018.2.14.<span style='mso-spacerun:yes'> 
+</span>If you don’t have this version or higher, you can download it  </span><a
+href="https://unity3d.com/get-unity/download"><span style='font-size:12.0pt;
+line-height:200%;font-family:"Arial","sans-serif"'>https://unity3d.com/get-unity/download</span></a><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif";
+color:black'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-justify:
+inter-ideograph;text-indent:-18.0pt;line-height:200%;mso-list:l3 level1 lfo6'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol;color:black'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Now we need Google VR SDK. (If
+you already have the SDK skip this step) If you don’t have Google VR SDK and
+you use Unity version 2017.4 or higher you can install the SDK with using Unity
+Installer. You can get the installer here. </span><a
+href="https://unity3d.com/get-unity/download/archive"><span style='font-size:
+12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>https://unity3d.com/get-unity/download/archive</span></a><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif";'> Choose your Unity version and select the Unity Installer<o:p></o:p></span></p>
+
+
+
+<p class=MsoListParagraphCxSpMiddle style='text-align:justify;text-justify:
+inter-ideograph;text-indent:-18.0pt;line-height:200%;mso-list:l0 level1 lfo5'><![if !supportLists]><span
+style='font-size:15.0pt;line-height:200%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Now open Unity and import the package the you
+downloaded. Select Assets &gt; Import Package &gt; Custom Package. Select the
+package and click import. Or just double click on package. We will build in
+Android Platform so we need to change the platform. Select File &gt; Build
+Settings (Ctrl + Shift + B). Select Android and click Switch Platform. You have
+to installed the Android SDK, Unity Android Support (we downloaded it at the
+begginning) and JDK (Java Development Kit) to take apk file. And last thing, we
+have to change some setting at the Player Settings. In the Build Settings (Ctrl
++ Shift + B) window, click Player Settings. </span><b style='mso-bidi-font-weight:
+normal'><span style='font-size:15.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;mso-add-space:
+auto;text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;
+line-height:200%;mso-list:l0 level2 lfo5'><![if !supportLists]><span
+style='font-size:15.0pt;line-height:200%;font-family:"Courier New";mso-fareast-font-family:
+"Courier New"'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Enable : Player Settings &gt; XR Settings
+&gt; Virttual Reality Supported</span><b style='mso-bidi-font-weight:normal'><span
+style='font-size:15.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;mso-add-space:
+auto;text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;
+line-height:200%;mso-list:l0 level2 lfo5'><![if !supportLists]><span
+style='font-size:15.0pt;line-height:200%;font-family:"Courier New";mso-fareast-font-family:
+"Courier New"'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Select Cardboard : Player Settings &gt; XR
+Settings &gt; Virttual Reality SDKs</span><b style='mso-bidi-font-weight:normal'><span
+style='font-size:15.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;mso-add-space:
+auto;text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;
+line-height:200%;mso-list:l0 level2 lfo5'><![if !supportLists]><span
+style='font-size:15.0pt;line-height:200%;font-family:"Courier New";mso-fareast-font-family:
+"Courier New"'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Change Minimum API level : Player Settings
+&gt; Other Settings &gt; Minimum API Level (API 19 for Cardboard, API 24 for
+Daydream)</span><b style='mso-bidi-font-weight:normal'><span style='font-size:
+15.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;mso-add-space:
+auto;text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;
+line-height:200%;mso-list:l0 level2 lfo5'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;font-family:"Courier New";mso-fareast-font-family:
+"Courier New"'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Set app’s identifier : Player Settings &gt;
+Other Settings &gt; Package Name (example:<span style='mso-spacerun:yes'> 
+</span>com.zuo.googleVR)<span style='mso-no-proof:yes'> </span><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:72.0pt;mso-add-space:auto;
+text-align:justify;text-justify:inter-ideograph;line-height:200%'><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif";
+mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_8" o:spid="_x0000_i1027"
+ type="#_x0000_t75" style='width:314.25pt;height:279pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="GoogleCardboardVR_files/image005.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=419 height=372
+src="GoogleCardboardVR_files/image006.jpg" v:shapes="Picture_x0020_8"><![endif]><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_9" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:4in;
+ height:450.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="GoogleCardboardVR_files/image007.png" o:title=""/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=384 height=601
+src="GoogleCardboardVR_files/image008.jpg" v:shapes="Picture_x0020_9"><![endif]></span><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:200%'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:15.0pt;line-height:200%;font-family:"Arial","sans-serif"'>Let’s
+Build Our First VR App<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><span style='font-size:12.0pt;line-height:200%;font-family:
+"Arial","sans-serif"'>Now we can build our first VR application using demo
+scene that is comming with imported package. Open the Google VR &gt; Demos &gt;
+Scenes &gt; Hello VR. You can control the game with pressing Play button.<span
+style='mso-spacerun:yes'>  </span>Now building time.Select File &gt; Build (or
+Build and Run). Set your apk name and click build.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><span style='font-size:12.0pt;line-height:200%;font-family:
+"Arial","sans-serif"'>Congratulation you develop your first VR Application.
+Ohh. Wait a minute. What do you do if you want to build any camera in your own
+scene for google cardbord? Don’t worry. Just build your own scene as you did
+before but just change the player settings as we did before (enable virtual
+reality support and select he cardbord)<br style='mso-special-character:line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><span style='font-size:12.0pt;line-height:200%;font-family:
+"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><span style='font-size:12.0pt;line-height:200%;font-family:
+"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:200%'><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif";
+mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_2" o:spid="_x0000_i1025"
+ type="#_x0000_t75" style='width:5in;height:198.75pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="GoogleCardboardVR_files/image009.gif" o:title="VR2"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=480 height=265
+src="GoogleCardboardVR_files/image009.gif" v:shapes="Picture_x0020_2"><![endif]></span><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
