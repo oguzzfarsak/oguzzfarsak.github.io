@@ -1,0 +1,476 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>ARCORE ZUO</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+</head>
+<body>
+<div id="uppermenu"><span class="container">tel : 00000000 | email : contact@domain.com</span></div>
+<div class="container">
+  <!--centers the content between from header to footer-->
+  <header  class="clearfix">
+    <h1 class="left"><span>ZUO</span>blog</h1>
+    <form action="#" class="right" method="post">
+      <input class="span-6 last" type="text" name="searchField" placeholder="search">
+    </form>
+  </header>
+  <nav>
+    <ul>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div id="content" class="clearfix">
+    <section id="posts" class="span-15 append-1">
+      <h1><span>Recent posts</span></h1>
+      <article>
+        <div class="date span-3">03 December</div>
+        <h2><a href="#">AUGMENTED REALITY</a></h2>
+        <div class="metadata">
+          <ul>
+            <li>posted by <a href="#">Admin</a></li>
+            <li> in <a href="#">Unity3D</a></li>
+            <li><a href="#">59comments</a></li>
+          </ul>
+        </div>
+<p align=center style='text-align:center'><b><span style='font-size:22.0pt;line-height:115%'>Getting
+Started Augmented Reality with ARCore<o:p></o:p></span></b></p>
+		 
+		</p>
+		
+<p class=MsoNormal style='tab-stops:64.3pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:16.0pt;line-height:115%;font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;tab-stops:64.3pt'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:16.0pt;line-height:
+115%;font-family:"Arial","sans-serif";mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_2" o:spid="_x0000_i1027" type="#_x0000_t75"
+ style='width:5in;height:202.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ARCore_files/image001.gif" o:title="giphy-downsized-large"/>
+</v:shape><![endif]--><![if !vml]><img width=480 height=270
+src="ARCore_files/image001.gif" v:shapes="Picture_x0020_2"><![endif]></span></b><b
+style='mso-bidi-font-weight:normal'><span style='font-size:16.0pt;line-height:
+115%;font-family:"Arial","sans-serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%;tab-stops:64.3pt'><span style='font-size:12.0pt;line-height:
+200%;font-family:"Arial","sans-serif"'>We discused what augmented reality is in
+our Vuforia article, you can read is in here(link to Vuforia article). <span
+style='mso-spacerun:yes'> </span>In this article we will discuss ARCore and we will
+develop a ARCore app using Unity3d. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%;tab-stops:64.3pt'><span style='font-size:12.0pt;line-height:
+200%;font-family:"Arial","sans-serif"'>Let’s talk about a little bit ARCore. ARCore
+introduced in February 2018 as an Android’s world answer to ARKit offers an AR
+functionality for several latest mobile devices running Android 7.0 and higher.
+The new version of 1.5 introduces cloud anchor system allowing synchronisation
+of surrounding world among users.<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:200%;
+tab-stops:64.3pt'><span style='font-size:12.0pt;line-height:200%;font-family:
+"Arial","sans-serif";mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_4"
+ o:spid="_x0000_i1026" type="#_x0000_t75" style='width:294pt;height:162pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ARCore_files/image002.png" o:title="arcoreLogo"/>
+</v:shape><![endif]--><![if !vml]><img width=392 height=216
+src="ARCore_files/image003.jpg" v:shapes="Picture_x0020_4"><![endif]></span><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:200%;
+tab-stops:64.3pt'><span style='font-size:12.0pt;line-height:200%;font-family:
+"Arial","sans-serif"'>{ARCore logo}<o:p></o:p></span></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><b>Functions: </b></p>
+
+<p class=Default style='margin-top:0cm;margin-right:0cm;margin-bottom:8.65pt;
+margin-left:0cm;text-align:justify;text-justify:inter-ideograph;text-indent:
+0cm;line-height:200%;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>•<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>Markless tracking </p>
+
+<p class=Default style='margin-top:0cm;margin-right:0cm;margin-bottom:8.65pt;
+margin-left:0cm;text-align:justify;text-justify:inter-ideograph;text-indent:
+0cm;line-height:200%;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>•<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-spacerun:yes'> </span>SLAM
+Simultaneous Localization and Mapping </p>
+
+<p class=Default style='margin-top:0cm;margin-right:0cm;margin-bottom:8.65pt;
+margin-left:0cm;text-align:justify;text-justify:inter-ideograph;text-indent:
+0cm;line-height:200%;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>•<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-spacerun:yes'> </span>Large
+areas mapping </p>
+
+<p class=Default style='margin-top:0cm;margin-right:0cm;margin-bottom:8.65pt;
+margin-left:0cm;text-align:justify;text-justify:inter-ideograph;text-indent:
+0cm;line-height:200%;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>•<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-spacerun:yes'> </span>Light
+estimation </p>
+
+<p class=Default style='margin-left:0cm;text-align:justify;text-justify:inter-ideograph;
+text-indent:0cm;line-height:200%;mso-list:l2 level1 lfo1'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>•<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-spacerun:yes'> </span>Cloud
+Anchors colaborative AR experience image/object</p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><o:p>&nbsp;</o:p></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><b>Platforms: </b></p>
+
+<p class=Default style='margin-top:0cm;margin-right:0cm;margin-bottom:8.65pt;
+margin-left:0cm;text-align:justify;text-justify:inter-ideograph;text-indent:
+0cm;line-height:200%;mso-list:l3 level1 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>•<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-spacerun:yes'> </span>Android,
+Android NDK </p>
+
+<p class=Default style='margin-top:0cm;margin-right:0cm;margin-bottom:8.65pt;
+margin-left:0cm;text-align:justify;text-justify:inter-ideograph;text-indent:
+0cm;line-height:200%;mso-list:l3 level1 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>•<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-spacerun:yes'> </span>Unity </p>
+
+<p class=Default style='margin-left:0cm;text-align:justify;text-justify:inter-ideograph;
+text-indent:0cm;line-height:200%;mso-list:l3 level1 lfo2'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>•<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-spacerun:yes'> </span>Unreal </p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><o:p>&nbsp;</o:p></p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><b>License: </b></p>
+
+<p class=Default style='margin-left:0cm;text-align:justify;text-justify:inter-ideograph;
+text-indent:0cm;line-height:200%;mso-list:l1 level1 lfo3'><![if !supportLists]><span
+style='mso-fareast-font-family:Arial'><span style='mso-list:Ignore'>•<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='mso-spacerun:yes'> </span>Free </p>
+
+<p class=Default style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><o:p>&nbsp;</o:p></p>
+
+<p class=MsoNormal style='line-height:200%'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>Requirements<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='line-height:200%'><span style='font-size:12.0pt;
+line-height:200%;font-family:"Arial","sans-serif"'>You'll need:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:200%'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>Hardware
+<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm;line-height:200%;
+mso-list:l0 level2 lfo4'><![if !supportLists]><span style='font-size:12.0pt;
+line-height:200%;font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>An ARCore&nbsp;</span><a
+href="https://developers.google.com/ar/discover/supported-devices"><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>supported
+phone</span></a><span style='font-size:12.0pt;line-height:200%;font-family:
+"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm;line-height:200%;
+mso-list:l0 level2 lfo4'><![if !supportLists]><span style='font-size:12.0pt;
+line-height:200%;font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>A USB cable to connect your phone to your
+development machine<o:p></o:p></span></p>
+
+<p class=MsoNormal style='line-height:200%'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>Software<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm;line-height:200%;
+mso-list:l0 level2 lfo4'><![if !supportLists]><span style='font-size:12.0pt;
+line-height:200%;font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><a
+href="https://unity3d.com/get-unity/download/archive"><span style='font-size:
+12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>Unity&nbsp;2017.4.9f1
+or later</span></a><span style='font-size:12.0pt;line-height:200%;font-family:
+"Arial","sans-serif"'>&nbsp;with&nbsp;</span><a
+href="https://docs.unity3d.com/Manual/InstallingUnity.html"><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>Android
+Build Support</span></a><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>&nbsp;selected during installation<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm;line-height:200%;
+mso-list:l0 level2 lfo4'><![if !supportLists]><span style='font-size:12.0pt;
+line-height:200%;font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><a
+href="https://github.com/google-ar/arcore-unity-sdk/releases"><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>ARCore
+SDK for Unity&nbsp;1.5.0 or later</span></a><span style='font-size:12.0pt;
+line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:0cm;text-indent:0cm;line-height:200%;
+mso-list:l0 level2 lfo4'><![if !supportLists]><span style='font-size:12.0pt;
+line-height:200%;font-family:"Arial","sans-serif";mso-fareast-font-family:Arial'><span
+style='mso-list:Ignore'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Android SDK&nbsp;7.0 (API Level 24) or later,
+installed using the SDK Manager in&nbsp;</span><a
+href="https://developer.android.com/studio"><span style='font-size:12.0pt;
+line-height:200%;font-family:"Arial","sans-serif"'>Android Studio</span></a><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+justify;text-justify:inter-ideograph;line-height:200%;mso-layout-grid-align:
+none;text-autospace:none'><b><span style='font-size:16.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Steps for Unity (Image Recognition)</span></b><b><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+justify;text-justify:inter-ideograph;line-height:200%;mso-layout-grid-align:
+none;text-autospace:none'><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif";mso-bidi-font-weight:bold'>Development of a Ar
+application with ARCore is easier than Vuforia. <o:p></o:p></span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+     line-height:200%;mso-list:l4 level1 lfo5'><span style='font-size:12.0pt;
+     line-height:200%;font-family:"Arial","sans-serif"'>Open Unity and create a
+     new&nbsp;3D&nbsp;project. <o:p></o:p></span></li>
+</ul>
+
+<p class=MsoListParagraphCxSpFirst style='text-align:justify;text-justify:inter-ideograph;
+text-indent:-18.0pt;line-height:200%;mso-list:l4 level1 lfo5'><![if !supportLists]><span
+style='font-size:15.0pt;line-height:200%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Now open Unity and import the package the you
+downloaded. Select Assets &gt; Import Package &gt; Custom Package. Select the
+package and click import. Or just double click on package. We will build in
+Android Platform so we need to change the platform. Select File &gt; Build
+Settings (Ctrl + Shift + B). Select Android and click Switch Platform. You have
+to installed the Android SDK, Unity Android Support (we downloaded it at the
+begginning) and JDK (Java Development Kit) to take apk file. And last thing, we
+have to change some setting at the Player Settings. In the Build Settings (Ctrl
++ Shift + B) window, click Player Settings. </span><b style='mso-bidi-font-weight:
+normal'><span style='font-size:15.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;mso-add-space:
+auto;text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;
+line-height:200%;mso-list:l4 level2 lfo5'><![if !supportLists]><span
+style='font-size:15.0pt;line-height:200%;font-family:"Courier New";mso-fareast-font-family:
+"Courier New"'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Enable : Player Settings &gt; XR Settings
+&gt; ARCore Supported</span><b style='mso-bidi-font-weight:normal'><span
+style='font-size:15.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;mso-add-space:
+auto;text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;
+line-height:200%;mso-list:l4 level2 lfo5'><![if !supportLists]><span
+style='font-size:15.0pt;line-height:200%;font-family:"Courier New";mso-fareast-font-family:
+"Courier New"'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Change Minimum API level : Player Settings
+&gt; Other Settings &gt; Minimum API Level (Android 7.0 or higher)</span><b
+style='mso-bidi-font-weight:normal'><span style='font-size:15.0pt;line-height:
+200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:72.0pt;mso-add-space:
+auto;text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;
+line-height:200%;mso-list:l4 level2 lfo5'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;font-family:"Courier New";mso-fareast-font-family:
+"Courier New"'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Set app’s identifier : Player Settings &gt;
+Other Settings &gt; Package Name (example:<span style='mso-spacerun:yes'> 
+</span>com.zuo.googleVR)<span style='mso-no-proof:yes'> </span><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-align:justify;text-justify:
+inter-ideograph;text-indent:-18.0pt;line-height:200%;mso-list:l4 level1 lfo5'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif";mso-no-proof:yes'>Go to Assets &gt; GoogleARCore
+&gt; Examples &gt; AugmentedImage &gt; Scenes<span style='mso-spacerun:yes'> 
+</span>and open AugmentedImage.</span><span style='font-size:12.0pt;line-height:
+200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='text-align:justify;text-justify:inter-ideograph;
+text-indent:-18.0pt;line-height:200%;mso-list:l4 level1 lfo5'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif";mso-no-proof:yes'>Now time to set images that
+recognized by app.</span><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <ul style='margin-top:0cm' type=circle>
+  <li class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;
+      text-align:justify;text-justify:inter-ideograph;line-height:200%;
+      mso-list:l4 level2 lfo5;mso-layout-grid-align:none;text-autospace:none'><span
+      style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>Select
+      the images in the Project window. Click mouse right. Create
+      augmentedImageDatabase<o:p></o:p></span></li>
+  <li class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;
+      text-align:justify;text-justify:inter-ideograph;line-height:200%;
+      mso-list:l4 level2 lfo5;mso-layout-grid-align:none;text-autospace:none'><span
+      style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>Set<span
+      style='mso-spacerun:yes'>  </span>the database to AugementedImageSession in
+      Hierarchy Window.<o:p></o:p></span></li>
+ </ul>
+ <li class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+     justify;text-justify:inter-ideograph;line-height:200%;mso-list:l4 level1 lfo5;
+     mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+     12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>Or forget this
+     step (selection images) just use the default database.<o:p></o:p></span></li>
+ <li class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+     justify;text-justify:inter-ideograph;line-height:200%;mso-list:l4 level1 lfo5;
+     mso-layout-grid-align:none;text-autospace:none'><span style='font-size:
+     12.0pt;line-height:200%;font-family:"Arial","sans-serif"'>Now time to
+     build and fun.<o:p></o:p></span></li>
+</ul>
+
+<p class=MsoListParagraph style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:72.0pt;margin-bottom:.0001pt;mso-add-space:auto;text-align:
+justify;text-justify:inter-ideograph;text-indent:-18.0pt;line-height:200%;
+mso-list:l4 level2 lfo5;mso-layout-grid-align:none;text-autospace:none'><![if !supportLists]><span
+style='font-size:11.5pt;line-height:200%;font-family:"Courier New";mso-fareast-font-family:
+"Courier New"'><span style='mso-list:Ignore'>o<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Select File &gt; Build (or Build and Run).
+Set your apk name and click build. Thats it. Congratulation you develop your
+first ARCore Application. Now if you turn your camera to the image you will see
+an frame around the image.</span><span style='font-size:11.5pt;line-height:
+200%'> <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+justify;text-justify:inter-ideograph;line-height:200%;mso-layout-grid-align:
+none;text-autospace:none'><b><span style='font-size:16.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:
+justify;text-justify:inter-ideograph;line-height:200%;mso-layout-grid-align:
+none;text-autospace:none'><b><span style='font-size:16.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Steps for Unity (Plane Detection)</span></b><b><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></b></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;line-height:200%;
+mso-list:l4 level1 lfo5;tab-stops:64.3pt'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Open a new Unity Project and set player
+setting as we did above. <o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-align:justify;text-justify:
+inter-ideograph;text-indent:-18.0pt;line-height:200%;mso-list:l4 level1 lfo5'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif";mso-no-proof:yes'>Go to Assets &gt; GoogleARCore
+&gt; Examples &gt; HelloAR &gt; Scenes<span style='mso-spacerun:yes'> 
+</span>and open HelloAR.</span><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+200%;mso-list:l4 level1 lfo5;tab-stops:64.3pt'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>And build as we did above<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+200%;mso-list:l4 level1 lfo5;tab-stops:64.3pt'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Run the app. <o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+200%;mso-list:l4 level1 lfo5'><![if !supportLists]><span style='font-size:12.0pt;
+line-height:200%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Move your phone around until ARCore starts
+detecting and visualizing planes<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
+200%;mso-list:l4 level1 lfo5'><![if !supportLists]><span style='font-size:12.0pt;
+line-height:200%;font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%;
+font-family:"Arial","sans-serif"'>Tap a plane to put an Andy Android object on
+it.<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='line-height:200%'><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='line-height:200%'><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='line-height:200%'><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast align=center style='text-align:center;
+line-height:200%'><span style='font-size:12.0pt;line-height:200%;font-family:
+"Arial","sans-serif";mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_5"
+ o:spid="_x0000_i1025" type="#_x0000_t75" style='width:162pt;height:4in;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="ARCore_files/image004.gif" o:title="giphy-downsized-medium"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=216 height=384
+src="ARCore_files/image004.gif" v:shapes="Picture_x0020_5"><![endif]></span><span
+style='font-size:12.0pt;line-height:200%;font-family:"Arial","sans-serif"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%;tab-stops:64.3pt'><span style='font-size:12.0pt;line-height:
+200%;font-family:"Arial","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
