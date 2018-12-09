@@ -1,0 +1,523 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>ZUOblog</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+</head>
+<body>
+<div id="uppermenu"><span class="container">tel : 00000000 | email : contact@domain.com</span></div>
+<div class="container">
+  <!--centers the content between from header to footer-->
+  <header  class="clearfix">
+    <h1 class="left"><span>ZUO</span>blog</h1>
+    <form action="#" class="right" method="post">
+      <input class="span-6 last" type="text" name="searchField" placeholder="search">
+    </form>
+  </header>
+  <nav>
+    <ul>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div id="content" class="clearfix">
+    <section id="posts" class="span-15 append-1">
+      <h1><span>Recent posts</span></h1>
+      <article>
+        <div class="date span-3">07 November</div>
+        <h2><a href="#">VUFORIA CLOUD RECOGNITION</a></h2>
+        <div class="metadata">
+          <ul>
+            <li>posted by <a href="#">Admin</a></li>
+            <li> in <a href="#">Unity3D</a></li>
+            <li><a href="#">59comments</a></li>
+          </ul>
+        </div>
+
+<h1 align=center style='text-align:center;line-height:200%'>VIRTUAL REALITY
+YOUTUBE VIDEO STREAM</h1>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_1" o:spid="_x0000_i1027" type="#_x0000_t75"
+ style='width:405pt;height:228pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Youtube360_files/image001.gif" o:title="gif"/>
+</v:shape><![endif]--><![if !vml]><img width=540 height=304
+src="Youtube360_files/image001.gif" v:shapes="Picture_x0020_1"><![endif]></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>In this article we talk about youtube video streaming in Virtual Reality
+using Unity3D. There are a lot of 360 degree videos in Youtube and you can
+watch these videos using a cardboard VR glasses or the other glasses. We are
+going to create an andorid app using an existing project.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+line-height:200%'><span style='font-size:12.0pt;line-height:200%'><span
+style='mso-tab-count:1'>            </span>We can’t <span
+style='mso-spacerun:yes'> </span>start all over again but we can talk about the
+project. Now download the project that already created from <a
+href="http://www.oguzzfarsak.github.io/">here</a>. The project created using
+Unity3D 2018.2.14f1. You can download this version of Unity from <a
+href="https://unity3d.com/get-unity/download/archive">here</a> or you can
+download the unity package that contains the all project from <a
+href="http://www.oguzzfarsak.github.io/">here</a>. Ok I think you downloaded
+the project or the package. Open the project or import the package. <span
+style='mso-spacerun:yes'> </span><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>Now lets talk about basic thing and then read and write some codes. In
+this project we used Google Cardborad VR SDK to contol the player/phone. Open
+Assets &gt; Scenes &gt; MainMenu, if it is not opened.<span
+style='mso-spacerun:yes'>  </span>This scene is not VR if you want to make VR
+this scene too, set active or delete the “OffVR” gameobject that is in the hierarchy.
+This game object close the VR setting that makes normal camera to VR camera.
+There is a Main Camera, a Directional Light, an Event System and a Canvas. In
+this Canvas there is a input field that we will write the <span
+style='mso-spacerun:yes'> </span>link at here and a button to start/load the
+video. Ok this scene basicly like this.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>Now open Assets &gt; Scenes &gt; VideoStreaming. There are basic things
+in this scene too like a directional light. There is a Player game object to
+contoll the camera and display the GvrReticlePointer. There is a GvrEditorEmulator
+to contoll the player and pointer in the editor mode. There is also a
+GvrEventSystem. And last thing is OnVr game object. This game object open the
+VR setting that is closed in MainMenu scene. If you didnt close the VR setting,
+you can delete or set deactive this object. Yeah that is it. It looks so simple,
+right? Now lets read the codes to understand how it works.<o:p></o:p></span></p>
+
+<h1 style='line-height:200%'>Understand how it works</h1>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:53.4pt;mso-add-space:
+auto;text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;
+line-height:200%;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;mso-fareast-font-family:Calibri;
+mso-fareast-theme-font:minor-latin;mso-bidi-font-family:Calibri;mso-bidi-theme-font:
+minor-latin'><span style='mso-list:Ignore'>1-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%'>Get
+the link of youtube video using a input field (like :<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:53.4pt;mso-add-space:
+auto;text-align:justify;text-justify:inter-ideograph;line-height:200%'><span
+style='font-size:12.0pt;line-height:200%'><span
+style='mso-spacerun:yes'> </span><a
+href="https://www.youtube.com/watch?v=lnh53i6RqQc">https://www.youtube.com/watch?v=lnh53i6RqQc</a>
+)<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:53.4pt;mso-add-space:
+auto;text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;
+line-height:200%;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;mso-fareast-font-family:Calibri;
+mso-fareast-theme-font:minor-latin;mso-bidi-font-family:Calibri;mso-bidi-theme-font:
+minor-latin'><span style='mso-list:Ignore'>2-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%'>Click
+the button to set the link and open the other scene (VideoStreaming)<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:53.4pt;mso-add-space:
+auto;text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;
+line-height:200%;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;mso-fareast-font-family:Calibri;
+mso-fareast-theme-font:minor-latin;mso-bidi-font-family:Calibri;mso-bidi-theme-font:
+minor-latin'><span style='mso-list:Ignore'>3-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%'>(Opened
+VideoStreamin scene) Get the link. Create a connection. <o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:53.4pt;mso-add-space:
+auto;text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;
+line-height:200%;mso-list:l0 level1 lfo1'><![if !supportLists]><span
+style='font-size:12.0pt;line-height:200%;mso-fareast-font-family:Calibri;
+mso-fareast-theme-font:minor-latin;mso-bidi-font-family:Calibri;mso-bidi-theme-font:
+minor-latin'><span style='mso-list:Ignore'>4-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%'>Get
+the video using videoPlayer.<o:p></o:p></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:53.4pt;mso-add-space:auto;
+text-align:justify;text-justify:inter-ideograph;text-indent:-18.0pt;line-height:
+200%;mso-list:l0 level1 lfo1'><![if !supportLists]><span style='font-size:12.0pt;
+line-height:200%;mso-fareast-font-family:Calibri;mso-fareast-theme-font:minor-latin;
+mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'><span
+style='mso-list:Ignore'>5-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:200%'>Set
+the texture with video. Show the video 360 degree usign render texture. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>To understand how it work lets look scripts are used in the project. Open
+the MainMenu scene (Assets &gt; Scenes &gt; MainMenu). <span
+style='mso-spacerun:yes'> </span>In this scene, Main Camera and Canvas has
+scripts to contoller the camera and pointer. These scripts are came with Google
+VR SDK. <span style='mso-spacerun:yes'> </span>You don’t have to understand
+what they are for. Gyro Camera is for sensivity or smoothing the camera and Gvr
+Pointer Graphic Raycaster is for raycast of pointer. If you don’t want to use
+VR in this scene (this means you didn’t delete or disable the OffVR game
+object), dont worry about these script. These are for VR.<span
+style='mso-spacerun:yes'>  </span><span style='mso-spacerun:yes'> </span>Input
+field has script to set the link that will used in the VideoStreaming scene. <span
+style='mso-spacerun:yes'> </span>Name of this script is “Store Input Stream Url”.<o:p></o:p></span></p>
+
+
+<div style="background-color:rgba(0, 0, 0, 0.0470588)">
+ <pre>
+<code>
+void Start () 
+{
+            inputField = gameObject.GetComponent<InputField> ();
+            inputField.onEndEdit.AddListener(StoreUrlAndChangeScene)
+}
+
+public void StoreUrlAndChangeScene(string stringInputByUser) 
+{
+	if (stringInputByUser == null && stringInputByUser == "")
+		{
+			stringInputByUser = inputField.text;
+		} 
+	StreamUrl.UserInputUrl = stringInputByUser;
+	SceneManager.LoadScene ("VideoStreaming");
+}
+</code>
+ </pre>
+</div>
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>There are two method in this class. First of them is Start. In this start
+method, we set the input field and add a listener to this input field. In the
+Store UrlAndChangeScene method,<span style='mso-spacerun:yes'>  </span>first we
+check the link whether it is null or empty. This method takes a parameter is
+called “stringInputByUser”.<span style='mso-spacerun:yes'>  </span>We are going
+to use this string at other scene So we set<span style='mso-spacerun:yes'> 
+</span>StreamUrl.userInputUrl with this string. How can we access the string in
+the StreamUrl? Beacuse this string is static. And then we load the “VideoStreaming”
+scene using SceneManager. But when is <span style='mso-spacerun:yes'> </span>this
+method called? The answer is in the PlayButton. If you look Button Component of
+PlayButton, you will see the event. If user click this button, the StoreUrlAndChangeScene
+method will called. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>And OffVR game object has a script is called “OffVR”.<o:p></o:p></span></p>
+<div style="background-color:rgba(0, 0, 0, 0.0470588)">
+<pre>
+<code>
+void Start()
+{
+	StartCoroutine(LoadDevice("", false));
+}
+
+IEnumerator LoadDevice(string newDevice, bool enable)
+{
+	XRSettings.LoadDeviceByName(newDevice);
+	yield return null;
+	XRSettings.enabled = enable;
+} 
+
+</code>
+ </pre>
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>In the Start method we start the LoadDevice coroutine . This coroutine takes
+two parameter. A string and a boolean. The string is for which devices will
+load and the bool is for open-close XRSettings. We will use same method to open
+VR by sending “CardBoard” string like parameter. That is it.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>Now let’s look into VideoStreaming<span style='mso-spacerun:yes'> 
+</span>scene. “LiveVideoStream” object has a LiveVideoStream script. And this script
+has three method. First of all is GetVideoUrl.<o:p></o:p></span></p>
+<div style="background-color:rgba(0, 0, 0, 0.0470588); width:750px">
+<pre>
+<code>
+private string GetVideoUrl()
+{
+	var yt = new YoutubeUrlExtractor();
+	var links = yt.Extract(StreamUrl.UserInputUrl);
+	var url = string.Empty;
+
+		foreach (var link in links) 
+		{
+			var acquiredStream = false;
+			
+			if (!link[0].Equals(string.Empty) && link[1].Contains("hd720"))
+			{
+				acquiredStream = true;
+			}
+			if (!link[0].Equals(string.Empty) && link[1].Contains("medium")) 
+			{
+				acquiredStream = true;
+			}
+			if (!link[0].Equals(string.Empty) && link[1].Contains("small")) 
+			{
+				acquiredStream = true;
+			}
+
+			if(acquiredStream) 
+			{
+				url = link [0];
+				print ("Stream acquired:\n");
+				print ("Quality: " + link [1] + "\n");
+                print (link [0]);
+                break;
+            }
+		}
+	return url;
+	}
+} 
+
+</code>
+ </pre>
+</div>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>In this method, first it gets the link from StreamUrl class. If you
+remember, we set this string in MainMenu scene using and input filed. <span
+style='mso-spacerun:yes'> </span>And then it redesign the string/link using
+YoutubeUrlExtractor. And last thing is determining the quality of video. As you
+see, there are three quality option hd, medium, small. This quality is added to
+link to create a url. And it returns the url.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>Start method gets the url from GetVideoUrl method and starts the
+coroutine of StreamVideo. This coroutine is like this : <o:p></o:p></span></p>
+<div style="background-color:rgba(0, 0, 0, 0.0470588); width:750px">
+<pre>
+<code>
+IEnumerator StreamVideo()
+{
+	videoPlayer = gameObject.AddComponent<VideoPlayer>();
+	videoPlayer.playOnAwake = false;
+	videoPlayer.source = VideoSource.Url;
+	videoPlayer.url = videoUrl;
+	videoPlayer.Prepare();
+	
+	while (!videoPlayer.isPrepared)
+	{
+		yield return null;
+	}
+
+	print ("Stream Loaded. Ready to play.");
+	videoPlayer.targetTexture = RenderTexture;
+	videoPlayer.Play();
+
+	yield return null;
+}
+
+</code>
+ </pre>
+</div>
+
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>This coroutine is set the url of VideoPlayer using the videoUrl ( It is
+changed at the Start using GetVideoUrl). And then it sets the targetTexture of
+the videoPlayer and plays the video of videoPlayer.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>Maybe you say “<b style='mso-bidi-font-weight:normal'>That is ok. It
+takes the video and play the video but how can we see this video 360 degree?”</b>
+You are right. That is the trick of this project. We created a material (LiveVideoMaterial)
+that has Skybox/Panoramic shader. This shader takes a render texture (Spherical
+(HDR)). We used LiveVideoRenderTexture for this texture. And then we set the
+skybox material to this material (Lighting Settings &gt; Skybox Material). <span
+style='mso-spacerun:yes'> </span>VideoPlayer gets the video and set it to the render
+texture. The material (LiveVideoMaterial) and texture (LiveVideoRenderTexture) are
+in the Assets folder.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>GvrEditorEmulator is to contoll the player in the editor. And
+GvrEventSystem is for the ponter events.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>The last thing is OnVr game object. This obejct has OnVr script: <o:p></o:p></span></p>
+
+<div style="background-color:rgba(0, 0, 0, 0.0470588) ">
+<pre>
+<code>
+	void Start()
+	{
+		StartCoroutine(LoadDevice("Cardboard", true));
+	}
+	
+	IEnumerator LoadDevice(string newDevice, bool enable)
+	{
+		XRSettings.LoadDeviceByName(newDevice);
+		yield return null;
+		XRSettings.enabled = enable;
+	}
+</code>
+</pre>
+</div>
+	
+<p class=MsoNormal style='text-align:justify;text-justify:inter-ideograph;
+text-indent:35.4pt;line-height:200%'><span style='font-size:12.0pt;line-height:
+200%'>This script has two method like OffVr script. Start method starts
+coroutine of LoadDevice. This coroutine take two parameter; a string for the
+devices and a boolean to open-close. XRSettings loads the devices using the
+string and sets the XRSettings enable toggle using the boolean.<o:p></o:p></span></p>
+
+<h1>Important things:</h1>
+
+<p class=MsoListParagraph style='text-indent:-18.0pt;mso-list:l1 level1 lfo2'><![if !supportLists]><span
+style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
+Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]>The link what you want to use must be a
+youtube 360 degree video link like:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-indent:34.8pt'><span
+style='font-size:12.0pt;line-height:115%'><a
+href="https://www.youtube.com/watch?v=lnh53i6RqQc">https://www.youtube.com/watch?v=lnh53i6RqQc</a>
+<o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+style='font-size:12.0pt;line-height:115%;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_2" o:spid="_x0000_i1026" type="#_x0000_t75" style='width:453.75pt;
+ height:240.75pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Youtube360_files/image002.png" o:title="1"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=605 height=321
+src="Youtube360_files/image003.jpg" v:shapes="Picture_x0020_2"><![endif]></span><span
+style='font-size:12.0pt;line-height:115%'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+style='font-size:12.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+style='font-size:12.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-left:36.0pt;text-align:center'><span
+style='font-size:12.0pt;line-height:115%;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="Picture_x0020_3" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:453.75pt;
+ height:241.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="Youtube360_files/image004.png" o:title="2"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=605 height=322
+src="Youtube360_files/image005.jpg" v:shapes="Picture_x0020_3"><![endif]></span><span
+style='font-size:12.0pt;line-height:115%'><o:p></o:p></span></p>
+
+
+
+<p class=MsoListParagraphCxSpLast style='margin-left:18.0pt;mso-add-space:auto;
+line-height:150%'><span style='font-size:12.0pt;line-height:150%;font-family:
+"JosefinSans","sans-serif"'><o:p>&nbsp;</o:p></span></p>
+
+
+<img src="images/app.gif" alt="">
+		
+      </article>
+      <hr>
+      <div id="pagination"  > <a href="#">previous</a> <a href="#">1</a><a href="#" class="current">2</a><a href="#">3</a>...<a href="#">22</a><a href="#">next</a> </div>
+    </section>
+    <aside class="span-8 last right clearfix">
+      <h2><span>blog categories</span></h2>
+      <ul>
+        <li> <a href="#">Unity3D</a></li>
+        <li> <a href="#">Augmented Reality</a></li>
+        <li> <a href="#">Virtual Reality</a></li>
+		<li> <a href="#">Mixed Reality</a></li>
+		<li> <a href="#">html5 &amp; css3</a></li>
+        <li> <a href="#">web application</a></li>
+        
+      </ul>
+      <h2><span>Recent posts</span></h2>
+      <img src="images/rp_img.jpg" width="70" height="64" alt="" class="span-2">
+      <h3> <a href="#">first post</a></h3>
+      <p>Lorem ipsum dolor sit amet orem ipsum dolor</p>
+      <p class="date">12 March at 10:10 am</p>
+      <hr>
+      <img src="images/rp_img.jpg" width="70" height="64" alt="" class="span-2">
+      <h3> <a href="#">first post</a></h3>
+      <p>Lorem ipsum dolor sit amet orem ipsum dolor</p>
+      <p class="date">12 March at 10:10 am</p>
+      <hr>
+      <img src="images/rp_img.jpg" width="70" height="64" alt="" class="span-2">
+      <h3> <a href="#">first post</a></h3>
+      <p>Lorem ipsum dolor sit amet orem ipsum dolor</p>
+      <p class="date">12 March at 10:10 am</p>
+      <hr>
+      <h2><span>Archive</span></h2>
+      <ul>
+        <li> <a href="#">March 2018</a></li>
+        <li> <a href="#">April 2018</a></li>
+        <li> <a href="#">May 2018</a></li>
+        <li> <a href="#">June 2018</a></li>
+        <li> <a href="#">July 2018</a></li>
+      </ul>
+    </aside>
+  </div>
+</div>
+<footer class="clearfix">
+  <div class="container">
+    <div class="about span-6 append-1">
+      <h3>About ZUOblog</h3>
+      <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet orem ipsum dolor sit amet, consetetur sadipscing eli</p>
+    </div>
+    <div id="tweets" class="span-6 append-1">
+      <h3>Latest tweets</h3>
+      <div class="one_tweet">
+        <p>sit amet orem ipsum dolor sit amet, consetetur sadipscing </p>
+        <a href="#">http://t.co/#####</a>
+        <div class="date">03 March 2013</div>
+      </div>
+      <div class="one_tweet">
+        <p>sit amet orem ipsum dolor sit amet</p>
+        <a href="#">http://t.co/#####</a>
+        <div class="date">03 March 2013</div>
+      </div>
+    </div>
+    <div id="footer_form" class="span-10 last clearfix">
+      <h3>Contact us</h3>
+      <form action="#">
+        <div class="row">
+          <label for="name">your name</label>
+          <input type="text" id="name" name="name" class="span-7 right last">
+        </div>
+        <div class="row">
+          <label for="email">your email</label>
+          <input type="text" id="email" name="email" class="span-7 right last">
+        </div>
+        <div class="row">
+          <label for="message">your message</label>
+          <textarea id="message" name="message" class="span-7 right last"></textarea>
+        </div>
+        <div class="right">
+          <input type="submit">
+        </div>
+      </form>
+    </div>
+    <hr>
+    Copyright 2013 by <b>SITE INC</b>, all rights reserved <span class="right last">Design by: <a href="">xxxX</a></span></div>
+</footer>
+</body>
+</html>
